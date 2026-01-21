@@ -1,5 +1,7 @@
 # Goodtocode.SecuredHttpClient
 
+[![NuGet CI/CD](https://github.com/goodtocode/aspect-securedhttpclient/actions/workflows/gtc-securedhttpclient-nuget.yml/badge.svg)](https://github.com/goodtocode/aspect-securedhttpclient/actions/workflows/gtc-securedhttpclient-nuget.yml)
+
 A secure, resilient HTTP client registration and access token management library for .NET and Blazor. Easily add OAuth2-protected HttpClients to your application with support for both Client Credentials and Authorization Code PKCE flows.
 
 ## Features
