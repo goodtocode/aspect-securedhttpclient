@@ -5,13 +5,13 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/gtc-domain-ci-cd-nuget.yml
+      - .github/workflows/gtc-securedhttpclient-nuget.yml
       - src/**
   push:
     branches:
       - main
     paths:
-      - .github/workflows/gtc-domain-ci-cd-nuget.yml
+      - .github/workflows/gtc-securedhttpclient-nuget.yml
       - src/**
   workflow_dispatch:
     inputs:
@@ -28,11 +28,11 @@ permissions:
 env:
   SCRIPTS_PATH: "./.github/scripts"
   SRC_PATH: "./src"
-  PROJECT_PATH: "Goodtocode.Domain"
-  PROJECT_FILE: "Goodtocode.Domain.csproj"
-  SRC_SLN: "Goodtocode.Domain.sln"
-  TEST_PATH: "Goodtocode.Domain.Tests"
-  TEST_PROJECT: "Goodtocode.Domain.Tests.csproj"
+  PROJECT_PATH: "Goodtocode.SecuredHttpClient"
+  PROJECT_FILE: "Goodtocode.SecuredHttpClient.csproj"
+  SRC_SLN: "Goodtocode.SecuredHttpClient.sln"
+  TEST_PATH: "Goodtocode.SecuredHttpClient.Tests"
+  TEST_PROJECT: "Goodtocode.SecuredHttpClient.Tests.csproj"
 jobs:
   ci:
     name: "NuGet CI"
