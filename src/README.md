@@ -1,6 +1,6 @@
-# Goodtocode.SecuredHttpClient
+# Goodtocode.HttpClient
 
-A secure, resilient HTTP client registration and access token management library for .NET and Blazor. Easily add OAuth2-protected HttpClients to your application with support for both Client Credentials and Authorization Code PKCE flows.
+A secure, resilient HTTP client registration and access token management library for .NET 9 and Blazor. Easily add OAuth2-protected HttpClients to your application with support for both Client Credentials and Authorization Code PKCE flows.
 
 ## Features
 - Register HttpClients that automatically acquire and attach OAuth2 access tokens
@@ -15,7 +15,7 @@ A secure, resilient HTTP client registration and access token management library
 Install via NuGet:
 
 ```
-dotnet add package Goodtocode.SecuredHttpClient
+dotnet add package Goodtocode.HttpClient
 ```
 
 ## Quick Start
@@ -80,7 +80,7 @@ public static IServiceCollection AddAccessTokenHttpClient(
 
 ### 2. Add Bearer Token to HttpClient (Manual)
 ```csharp
-using Goodtocode.SecuredHttpClient.Extensions;
+using Goodtocode.HttpClient.Extensions;
 
 httpClient.AddBearerToken("your-access-token");
 ```
