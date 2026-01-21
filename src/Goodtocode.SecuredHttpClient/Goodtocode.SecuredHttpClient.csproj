@@ -9,13 +9,13 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 
-		<PackageId>Goodtocode.HttpClient</PackageId>
+		<PackageId>Goodtocode.SecuredHttpClient</PackageId>
 		<Authors>Robert Good</Authors>
 		<Company>Goodtocode</Company>
 		<Description>A secure, resilient HTTP client registration and access token management library for .NET and Blazor. Easily add OAuth2-protected HttpClients to your application.</Description>
         <PackageTags>httpclient;oauth2;access-token;resilience;blazor;aspnetcore;dotnet;token-auth;dependency-injection;pkce;client-credentials;secure;rest;api</PackageTags>
-		<RepositoryUrl>https://github.com/Goodtocode/aspect-httpclient</RepositoryUrl>
-		<PackageProjectUrl>https://github.com/Goodtocode/aspect-httpclient</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/Goodtocode/aspect-securedhttpclient</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/Goodtocode/aspect-securedhttpclient</PackageProjectUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<Copyright>Copyright © 2026 Goodtocode</Copyright>
 		<PackageIcon>Goodtocode-icon.png</PackageIcon>
