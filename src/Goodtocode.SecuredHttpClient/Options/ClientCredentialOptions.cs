@@ -1,4 +1,6 @@
-﻿namespace Goodtocode.SecuredHttpClient.Options;
+﻿using Microsoft.Extensions.Options;
+
+namespace Goodtocode.SecuredHttpClient.Options;
 
 public class ClientCredentialOptions
 {
@@ -12,8 +14,8 @@ public class ClientCredentialOptions
         Scope = scope;
     }
 
-    public required string ClientId { get; set; }
-    public required string ClientSecret { get; set; }
-    public required string TokenUrl { get; set; }
-    public required string Scope { get; set; }
+    public string? ClientId { get; set; }
+    public string? ClientSecret { get; set; }
+    public string? TokenUrl { get; set; }
+    public string? Scope { get; set; }
 }

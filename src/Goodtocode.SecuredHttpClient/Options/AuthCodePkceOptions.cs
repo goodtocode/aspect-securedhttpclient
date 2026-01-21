@@ -1,4 +1,6 @@
-﻿namespace Goodtocode.SecuredHttpClient.Options;
+﻿using Microsoft.Extensions.Options;
+
+namespace Goodtocode.SecuredHttpClient.Options;
 
 public class AuthCodePkceOptions
 {
@@ -13,9 +15,9 @@ public class AuthCodePkceOptions
         Scope = scope;
     }
 
-    public required string ClientId { get; set; }
-    public required string CodeVerifier { get; set; }
-    public required Uri RedirectUri { get; set; }
-    public required Uri TokenUrl { get; set; }
-    public required string Scope { get; set; }
+    public string? ClientId { get; set; }
+    public string? CodeVerifier { get; set; }
+    public Uri? RedirectUri { get; set; }
+    public Uri? TokenUrl { get; set; }
+    public string? Scope { get; set; }
 }

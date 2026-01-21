@@ -9,7 +9,7 @@ A secure, resilient HTTP client registration and access token management library
 - Pluggable token providers via `IAccessTokenProvider`
 - Resilience (retry with jitter) for HTTP requests
 - Extension methods for adding bearer tokens to requests
-- Simple integration with Blazor, ASP.NET Core, and .NET 9 DI
+- Simple integration with Blazor, ASP.NET Core, and .NET DI
 
 ## Installation
 Install via NuGet:
