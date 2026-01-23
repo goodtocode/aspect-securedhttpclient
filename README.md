@@ -101,5 +101,11 @@ httpClient.AddBearerToken("your-access-token");
 MIT
 
 ## Contact
-- [GitHub Repo](https://github.com/goodtocode/aspect-httpclient)
+- [GitHub Repo](https://github.com/goodtocode/aspect-securedhttpclient)
 - [@goodtocode](https://twitter.com/goodtocode)
+
+## Version History
+
+| Version | Date       | Changes                       |
+|---------|------------|-------------------------------|
+| 1.1.0   | 2026-01-22 | Bump from .NET 9 to .NET 10   |
