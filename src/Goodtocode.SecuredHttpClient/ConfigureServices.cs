@@ -30,33 +30,4 @@ public static class ConfigureServices
 
         return services;
     }
-
-    public static IServiceCollection AddAuthCodePkceHttpClient(this IServiceCollection services,
-    IConfiguration configuration,
-    string clientName,
-    Uri baseAddress,
-    int maxRetry = 5)
-    {
-        services.AddSingleton<IValidateOptions<AuthCodePkceOptions>, AuthCodePkceOptionsValidation>();
-        services.AddOptions<AuthCodePkceOptions>()
-        .Bind(configuration.GetSection(nameof(AuthCodePkceOptions)))
-            .ValidateDataAnnotations()
-            .ValidateOnStart();
-        services.AddScoped<IAccessTokenProvider, AuthCodePkceTokenProvider>();
-        services.AddTransient<TokenHandler>();
-
-        services.AddHttpClient(clientName, options =>
-        {
-            options.DefaultRequestHeaders.Clear();
-            options.BaseAddress = baseAddress;
-        })
-            .AddHttpMessageHandler<TokenHandler>();
-            //.AddStandardResilienceHandler(options =>
-            //{
-            //    options.Retry.UseJitter = true;
-            //    options.Retry.MaxRetryAttempts = maxRetry;
-            //});
-
-        return services;
-    }
 }

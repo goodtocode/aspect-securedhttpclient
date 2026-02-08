@@ -9,7 +9,6 @@ A secure, resilient HTTP client registration and access token management library
 - Supports Client Credentials and Authorization Code PKCE flows
 - Built-in token caching and refresh
 - Pluggable token providers via `IAccessTokenProvider`
-- Resilience (retry with jitter) for HTTP requests
 - Extension methods for adding bearer tokens to requests
 - Simple integration with Blazor, ASP.NET Core, and .NET DI
 

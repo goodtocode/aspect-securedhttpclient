@@ -12,15 +12,22 @@ public class ClientCredentialTokenProvider(IOptions<ClientCredentialOptions> acc
     protected override async Task<string> GetNewAccessToken()
     {
         var httpClient = new HttpClient();
+
+        // Ensure no null values are passed to the dictionary
+        var scope = AccessTokenSetting.Value.Scope ?? string.Empty;
+        var clientId = AccessTokenSetting.Value.ClientId ?? string.Empty;
+        var clientSecret = AccessTokenSetting.Value.ClientSecret ?? string.Empty;
+        var tokenUrl = AccessTokenSetting.Value.TokenUrl ?? string.Empty;
+
         var content = new FormUrlEncodedContent(new Dictionary<string, string>
         {
-            { "scope", AccessTokenSetting.Value.Scope },
-            { "client_id", AccessTokenSetting.Value.ClientId },
-            { "client_secret", AccessTokenSetting.Value.ClientSecret },
+            { "scope", scope },
+            { "client_id", clientId },
+            { "client_secret", clientSecret },
             { "grant_type", "client_credentials" }
         });
 
-        var response = await httpClient.PostAsync(AccessTokenSetting.Value.TokenUrl, content);
+        var response = await httpClient.PostAsync(tokenUrl, content);
         if (!response.IsSuccessStatusCode) return string.Empty;
         var tokenResponse = JsonSerializer.Deserialize<BearerTokenDto>(await response.Content.ReadAsStringAsync());
         ExpirationDateUtc = DateTime.UtcNow.AddSeconds(tokenResponse?.ExpiresIn ?? 3600);
