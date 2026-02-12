@@ -1,7 +1,7 @@
 ﻿namespace Goodtocode.SecuredHttpClient.Middleware;
 
 public abstract class AccessTokenProviderBase() : IAccessTokenProvider
-{    
+{
     protected string Token { get; set; } = string.Empty;
     protected DateTime ExpirationDateUtc { get; set; }
 
